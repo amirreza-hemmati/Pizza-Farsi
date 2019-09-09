@@ -1,4 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Start Font Vazir*/
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir-Bold.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir-Bold.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir-Bold.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir-Black.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir-Black.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir-Black.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir-Black.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir-Medium.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir-Medium.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir-Medium.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir-Light.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir-Light.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir-Light.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../../node_modules/vazir-font/dist/Vazir-Thin.eot");
+  src: url("../../node_modules/vazir-font/dist/Vazir-Thin.eot?#iefix") format("embedded-opentype"), url("../../node_modules/vazir-font/dist/Vazir-Thin.woff2") format("woff2"), url("../../node_modules/vazir-font/dist/Vazir-Thin.woff") format("woff"), url("../../node_modules/vazir-font/dist/Vazir-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*End Font Vazir*/
 /**
- * Basic typography style for copy text
- */
+ * * Basic typography style for copy text * *
+**/
+.header .header__content h1, .header .header__content p {
+  color: #ffffff;
+  font-size: 600;
+  line-height: 1.8;
+  direction: rtl;
+  text-align: center;
+  font-family: Vazir;
+}
+
+@media (min-width: 0) {
+  .header .header__content h1 {
+    font-size: 30px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+  }
+  .header .header__content p {
+    font-size: 20px;
+    padding: 0 30px;
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, 0);
+  }
+}
+
+@media (min-width: 767.98px) {
+  .header .header__content h1 {
+    font-size: 50px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+  }
+  .header .header__content p {
+    font-size: 38px;
+    padding: 0 85px;
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, 0);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .header .header__content h1 {
+    font-size: 60px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+  }
+  .header .header__content p {
+    font-size: 40px;
+    padding: 0 200px;
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .header .header__content h1 {
+    font-size: 72px;
+    -webkit-transform: translate(0, -90px);
+            transform: translate(0, -90px);
+  }
+  .header .header__content p {
+    font-size: 40px;
+    padding: 0 260px;
+    -webkit-transform: translate(0, -50px);
+            transform: translate(0, -50px);
+  }
+}
+
+.nav .nav-item {
+  text-align: center;
+  font-size: 22px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: Vazir;
+}
+
+.nav .nav-item:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url(../image/bg-header.jpg);
+  background: linear-gradient(rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url(../image/bg-header.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #22272d;
+}
+
+.section-menu a {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 0 30px;
+  font-size: 22px;
+}
+
+.section-menu .section-menu__toggle-menu {
+  background-color: #000000;
+  height: inherit;
+}
+
+.section-menu .section-menu__logo {
+  margin: 10px 0;
+}
+
+.section-menu .section-menu__shopping-cart {
+  background-color: #fbc531;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,62 @@
 /**
- * Basic typography style for copy text
- */
+ * * Basic typography style for copy text * *
+**/
+
+.header{
+    .header__content{
+        h1 , p{
+            @include typography($c-white,600,null,1.8,rtl,center,$f-vazir,null,null);
+        }
+
+        @include risponsive("xm"){
+            h1{
+                font-size: 30px;
+                transform: translate(0,-30px)
+            }
+    
+            p{
+                font-size: 20px;
+                padding: 0 30px;
+                -webkit-transform: translate(0, -10px);
+                transform: translate(0, 0);
+            }            
+        }
+        @include risponsive("sm"){
+            h1{
+                font-size: 50px;
+                transform: translate(0,-30px)
+            }
+    
+            p{
+                font-size: 38px;
+                padding: 0 85px;
+                -webkit-transform: translate(0, -10px);
+                transform: translate(0, 0);
+            }
+        }
+        @include risponsive("md"){
+            h1{
+                font-size: 60px;
+                transform: translate(0,-30px)
+            }
+    
+            p{
+                font-size: 40px;
+                padding: 0 200px;
+                transform: translate(0,-10px)
+            }        
+        }
+        @include risponsive("lg"){
+            h1{
+                font-size: 72px;
+                transform: translate(0,-90px)
+            }
+    
+            p{
+                font-size: 40px;
+                padding: 0 260px;
+                transform: translate(0,-50px)
+            } 
+        }
+    }
+}
