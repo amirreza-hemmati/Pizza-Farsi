@@ -2,6 +2,7 @@
 
 // 1. Configuration and helpers
 @import
+  'abstracts/animation',
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins';
@@ -19,7 +20,9 @@
 
 // 4. Layout-related sections
 @import
+  'layout/nav',
   'layout/header',
+  'layout/main',
   'layout/footer';
 
 // 5. Components
