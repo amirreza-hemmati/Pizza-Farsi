@@ -6,3 +6,16 @@
     margin: 0;
     padding: 0;
 }
+
+body::-webkit-scrollbar{
+    background-color: $c-dark;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #caced2;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto; 
+}

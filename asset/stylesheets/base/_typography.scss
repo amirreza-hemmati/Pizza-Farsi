@@ -1,7 +1,6 @@
 /**
  * * Basic typography style for copy text * *
 **/
-
 .header{
     .header__content{
         h1 , p{
@@ -57,6 +56,100 @@
                 padding: 0 260px;
                 transform: translate(0,-50px)
             } 
+        }
+    }
+}
+
+.section-content{
+    .section-content__title{
+        @include typography($c-yellow,22px,600,1.8,rtl,center,$f-vazir,null,6rem 0 0 0);
+    }
+
+    .section-content__body{
+        @include typography($c-white,16px,600,1.8,rtl,center,$f-vazir,null,2rem 0 0 0);
+    }
+
+        .section-content__about{
+            .about-item{
+                i{
+                    color: $icon-color;
+                }
+        
+                h3{
+                    @include typography($c-yellow,20px,null,null,rtl,center,$f-vazir,null,15px 0 0 0);
+                }
+
+                p{
+                    @include typography($c-white,17px,null,null,rtl,center,$f-vazir,null,15px 25px 0 25px);
+                }
+            }
+        }
+}
+
+.pizza-slider__content{
+    .pizza-slider__title{
+        @include typography($c-white,42px,bold,null,rtl,center,$f-vazir,null,null);
+    }
+
+    .pizza-slider__money{
+        @include typography($c-yellow,24px,bold,null,rtl,center,$f-vazir,null,0 0 0 0);
+    }
+
+    .pizza-slider__body{
+        @include typography($c-white,20px,bold,null,rtl,center,$f-vazir,null,20px 0 50px 0);
+    }
+
+    .pizza-slider__btn{
+        @include typography($c-yellow,18px,600,null,rtl,center,$f-vazir,null,null);
+        border: $c-yellow 1px solid;
+        text-decoration: none;
+        padding: 12px 25px;
+        transition: 0.3s;
+        &:hover{
+            background: $c-yellow;
+            color: $c-white;
+            border: none;
+            padding: 12px 40px;
+        }
+    }
+}
+
+.pizza-crete{
+    .pizza-create__content{
+        .pizza-create__content-title{
+            @include typography($c-yellow,null,bold,null,rtl,center,$f-vazir,null,null);
+            @include risponsive("xm"){
+                font-size: 32px;
+            }
+            @include risponsive("sm"){
+                font-size: 38px;
+            }
+            @include risponsive("md"){
+                font-size: 50px;
+            }
+        }
+
+        .pizza-create__content-body{
+            @include typography($c-white,20px,600,null,rtl,center,$f-vazir,null,20px 0 0 0);
+            @include risponsive("xm"){
+                font-size: 16px;
+            }
+            @include risponsive("sm"){
+                font-size: 20px;
+            }
+        }
+    }
+
+    .create-more{
+        .create-more__title{
+            h3{
+                @include typography($c-yellow,22px,500,null,rtl,null,$f-vazir,null,null);
+            }
+
+            a{
+                @include typography($c-white,30px,100,null,rtl,null,$f-vazir,null,null);
+                text-decoration: none;
+            }
         }
     }
 }

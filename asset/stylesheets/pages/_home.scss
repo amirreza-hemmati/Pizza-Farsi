@@ -1,38 +1,164 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.section-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: $c-dark;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
+  a {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $c-white;
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 22px;
+  }
 
-.section-menu{
+  .section-menu__toggle-menu {
+    background-color: $c-black;
+    height: inherit;
+  }
+
+  .section-menu__logo {
+    margin: 10px 0;
+  }
+
+  .section-menu__shopping-cart {
+    background-color: $c-yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section-content {
+  .section-content__about {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 80px;
+    .about-item {
+      margin-top: 70px;
+    }
+    @include risponsive("md") {
+      .about-item {
+        flex-basis: 33.33%;
+      }
+    }
+  }
+}
+
+.pizza-slider {
+  position: relative;
+  background: linear-gradient(rgba(255, 52, 2, 0.8), rgba(255, 52, 2, 0.8)),
+    url(../image/pattern-1.png);
+
+  .pizza-slider__slider {
     display: flex;
     justify-content: space-between;
-    background-color: #22272d;
+    flex-direction: row-reverse;
+    position: absolute;
+    left: 0;
+    top: -55px;
+    // flex-wrap: wrap;
+    width: 100%;
 
 
-    a{
-        height: inherit;
+    .pizza-slider__content{
+        // flex-basis: 60%;
+        text-align: center;
+        height: 300px;
+    }
+  }
+
+  @include risponsive("xm"){
+    height: 1000px;
+    .pizza-slider__slider{
+        flex-wrap: wrap;
+    }
+
+    .slider-img {
+        flex-basis: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        color: white;
-        text-decoration: none;
-        padding: 0 30px;
-        font-size: 22px;
     }
 
-    .section-menu__toggle-menu{
-        background-color: #000000;
-        height: inherit;
+    .pizza-slider__content{
+        flex-basis: 100%;
+        margin-top: 50px
+    }
+  }
+
+  @include risponsive("md"){
+    height: 500px;
+    .pizza-slider__slider{
+        flex-wrap: nowrap;
     }
 
-    .section-menu__logo{
-        margin: 10px 0;
+    .slider-img {
+        flex-basis: 40%;
+        display: block;
     }
 
-    .section-menu__shopping-cart{
-        background-color: #fbc531;
+    .pizza-slider__content{
+        flex-basis: 60%;
+        position: relative;
+        top: 122px;
+        left: 33px;
+        margin-top: 0;
+    }
+  }
+}
+
+.pizza-crete{
+    padding-top: 130px;
+
+    .pizza-create__content{
+        .pizza-create__content-title{
+            
+        }
+
+        // .pizza-create__content-body{}
+    }
+
+    .create-more__more{
         display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+
+        .more-image{
+            flex-basis: 50%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .more-content{
+            flex-basis: 50%;
+        }
+    }
+
+    .pizza-crete__create{
+        margin-top: 100px;
+        .create-more{
+            
+            .create-more__title{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                border-top: 1.4px solid #424040;
+                padding: 30px 0;
+            }
+        }
     }
 }
