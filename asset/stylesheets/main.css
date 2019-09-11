@@ -544,16 +544,38 @@ body::-webkit-scrollbar-thumb {
 .app-android .container .app-android__content {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 80px;
+}
+
+@media (min-width: 0) {
+  .app-android .container .app-android__content {
+    padding: 42px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .app-android .container .app-android__content {
+    padding-right: 80px;
+  }
 }
 
 .app-android .container .app-android__content h2 {
   color: #fdbc2c;
-  font-size: 30px;
   font-weight: bold;
-  line-height: right;
   direction: rtl;
+  text-align: right;
   font-family: Vazir;
+}
+
+@media (min-width: 0) {
+  .app-android .container .app-android__content h2 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .app-android .container .app-android__content h2 {
+    font-size: 32px;
+  }
 }
 
 .app-android .container .app-android__content p {
@@ -586,9 +608,23 @@ body::-webkit-scrollbar-thumb {
   direction: rtl;
   font-family: Vazir;
   padding: 17px 20px;
-  margin: 60px 0 0 20px;
+  margin: 60px 0 0 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media (min-width: 0) {
+  .app-android .container .app-android__content .app-btn a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .app-android .container .app-android__content .app-btn a {
+    width: auto;
+    margin-left: 20px;
+  }
 }
 
 .app-android .container .app-android__content .app-btn a:hover {
@@ -652,6 +688,12 @@ footer .footer__number a {
   font-size: 55px;
 }
 
+@media (min-width: 0) {
+  footer .footer__number a {
+    font-size: 30px;
+  }
+}
+
 footer .footer__mail {
   padding-bottom: 30px;
 }
@@ -663,8 +705,20 @@ footer .footer__mail a {
   font-size: 25px;
 }
 
+@media (min-width: 0) {
+  footer .footer__mail a {
+    font-size: 20px;
+  }
+}
+
 footer .footer__image {
   padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section-menu {
@@ -1000,6 +1054,8 @@ footer .footer__image {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin: 0;
+    width: 100%;
   }
   .app-android .container .app-android__img {
     -ms-flex-preferred-size: 100%;
@@ -1010,6 +1066,10 @@ footer .footer__image {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .app-android .container .app-android__img img {
+    width: 250px;
+    height: 250px;
   }
   .app-android .container .app-android__content {
     -ms-flex-preferred-size: 100%;
@@ -1028,8 +1088,16 @@ footer .footer__image {
   }
 }
 
+@media (min-width: 767.98px) {
+  .app-android .container .app-android__img img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 @media (min-width: 991.98px) {
   .app-android .container {
+    width: 98%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1040,6 +1108,10 @@ footer .footer__image {
   .app-android .container .app-android__img {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+  }
+  .app-android .container .app-android__img img {
+    width: 369px;
+    height: 752px;
   }
   .app-android .container .app-android__content {
     -ms-flex-preferred-size: auto;
@@ -1065,6 +1137,18 @@ footer .footer__image {
   font-family: Vazir;
 }
 
+@media (min-width: 0) {
+  .send-mail .container h2 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .send-mail .container h2 {
+    font-size: 35px;
+  }
+}
+
 .send-mail .container form {
   margin-top: 40px;
   margin-bottom: 15px;
@@ -1078,20 +1162,35 @@ footer .footer__image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .send-mail .container form input[type=email] {
   border: 2px solid #000000;
   background-color: #ffffff;
-  padding: 18px 10px;
   font-size: 20px;
   direction: rtl;
-  width: 400px;
   text-align: right;
   color: #000000;
   font-weight: bold;
-  margin-left: 10px;
   font-family: Vazir;
+}
+
+@media (min-width: 0) {
+  .send-mail .container form input[type=email] {
+    margin-left: 0;
+    width: 100%;
+    padding: 18px 45px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .send-mail .container form input[type=email] {
+    width: 400px;
+    margin-left: 10px;
+    padding: 18px 10px;
+  }
 }
 
 .send-mail .container form input[type=email]:focus {
@@ -1118,5 +1217,24 @@ footer .footer__image {
   background-color: #fdbc2c;
   color: #000000;
   font-weight: bold;
+}
+
+@media (min-width: 0) {
+  .send-mail .container form input[type=submit] {
+    margin-top: 20px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .send-mail .container form input[type=submit] {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .send-mail .container form input[type=submit] {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

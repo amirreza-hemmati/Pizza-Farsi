@@ -234,11 +234,17 @@
     @include risponsive("xm"){
       flex-wrap: wrap;
       flex-direction: column-reverse;
+      margin: 0 ;
+      width: 100%;
       // justify-content: center;
       .app-android__img{
         flex-basis: 100%;
         display: flex;
         justify-content: center;
+        img{
+          width: 250px;
+          height: 250px
+        }
       }
       .app-android__content{
         flex-basis: 100%;
@@ -252,11 +258,25 @@
       }
     }
 
+    @include risponsive(sm){
+      .app-android__img{
+        img{
+          width: 400px;
+          height: 400px
+        }
+      }
+    }
+
     @include risponsive("md"){
+      width: 98%;
       flex-direction: row;
       flex-wrap: nowrap;
       .app-android__img{
         flex-basis: auto;
+        img{
+          width: 369px;
+          height: 752px;
+        }
       }
       .app-android__content{
         flex-basis: auto;
@@ -273,6 +293,12 @@
     text-align: center;
 
     h2{
+      @include risponsive("xm"){
+        font-size: 25px;
+      }
+      @include risponsive("sm"){
+        font-size: 35px;
+      }
       @include typography(
         $c-black,
         35px,
@@ -292,18 +318,26 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: center;
+      flex-wrap: wrap;
 
       input[type=email]{
+        @include risponsive("xm"){
+          margin-left: 0 ;
+          width: 100% ;
+          padding: 18px 45px;
+        }
+        @include risponsive("sm"){
+          width: 400px;
+          margin-left: 10px;
+          padding: 18px 10px;
+        }
         border: 2px solid $c-black;
         background-color: $c-white;
-        padding: 18px 10px;
         font-size: 20px;
         direction: rtl;
-        width: 400px;
         text-align:right;
         color: $c-black;
         font-weight: bold;
-        margin-left: 10px;
         font-family: $f-vazir;
         &:focus{
           outline:none;
@@ -327,6 +361,17 @@
           background-color: $c-yellow;
           color: $c-black;
           font-weight: bold;
+        }
+
+        @include risponsive("xm"){
+          margin-top: 20px;
+          padding: 8px
+        }
+        @include risponsive("sm"){
+          margin-top: 0;
+        }
+        @include risponsive("md"){
+          margin-top: 0
         }
       }
     }

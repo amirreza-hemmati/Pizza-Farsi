@@ -14,6 +14,9 @@ footer{
             font-family: $f-FTG;
             text-decoration: none;
             color: #c74428;
+            @include risponsive("xm"){
+                font-size: 30px;
+            }
             font-size: 55px;
         }
     }
@@ -23,12 +26,17 @@ footer{
             font-family: $f-FTG;
             text-decoration: none;
             color: #c74428;
+            @include risponsive("xm"){
+                font-size: 20px
+            }
             font-size: 25px;
         }
         padding-bottom: 30px;
     }
 
     .footer__image{
-        padding-bottom: 10px
+        padding-bottom: 10px;
+        display:flex;
+        justify-content: center;
     }
 }

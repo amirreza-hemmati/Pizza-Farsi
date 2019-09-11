@@ -512,15 +512,26 @@
     .container{
         .app-android__content{
             box-sizing: border-box;
-            padding-right: 80px;
+            @include risponsive("xm"){
+              padding: 42px;
+            }
+            @include risponsive("md"){
+              padding-right: 80px;
+            }
             h2{
+              @include risponsive("xm"){
+                font-size: 22px
+              }
+              @include risponsive("md"){
+                font-size: 32px
+              }
                 @include typography(
                     $c-yellow,
-                    30px,
-                    bold,
-                    right,
-                    rtl,
                     null,
+                    bold,
+                    null,
+                    rtl,
+                    right,
                     $f-vazir,
                     null,
                     null
@@ -566,8 +577,17 @@
                         null,
                         $f-vazir,
                         17px 20px,
-                        60px 0 0 20px    
+                        60px 0 0 0    
                     );
+
+                    @include risponsive("xm"){
+                      width: 100%;
+                      text-align: center;
+                    }
+                    @include risponsive("md"){
+                      width: auto;
+                      margin-left: 20px;
+                    }
                     transition: 0.4s;
                     &:hover{
                         background: $c-border;
