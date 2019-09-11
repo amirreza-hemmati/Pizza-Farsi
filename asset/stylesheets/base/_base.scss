@@ -19,3 +19,16 @@ body::-webkit-scrollbar-thumb{
     width: 85%;
     margin: 0 auto; 
 }
+
+.owl-stage-outer{
+    height: 100%;
+}
+
+.owl-dot:focus{
+    outline: none;
+}
+
+*::selection{
+    background-color: $c-selection;
+    color: $c-white;
+}
